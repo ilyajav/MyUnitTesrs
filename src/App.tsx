@@ -2,23 +2,15 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+const names = ["Dimych", "Sveta", "Katya", "Viktor", "Ignat", ]
+const users = [{name: 'Dimych'}, {name: 'Sveta'}, {name: 'Katya'}, {name: 'Viktor'}, {name: 'Ignat'}]
+let teamNames = users.map((n, i, array) => <li key={i}>{n.name}</li>)
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <ul>
+      {teamNames}
+    </ul>
     </div>
   );
 }
